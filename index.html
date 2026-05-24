@@ -83,3 +83,85 @@
            });
 })();
 </script>
+
+<script>(function () {
+  function ready(fn) {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", fn);
+    } else {
+      fn();
+    }
+  }
+
+  function saveMemo() {
+    var memo = typeof refreshMemo === "function" ? refreshMemo() : "";
+    try {
+      if (memo) localStorage.setItem("machineConsultMemo", memo);
+    } catch (_) {}
+    return memo;
+  }
+
+  ready(function () {
+    var form = document.querySelector("#consultForm");
+    var mailto = document.querySelector("#mailtoLink");
+    var sendBox = document.querySelector(".send-box");
+    var browserButton = document.querySelector(".browser-submit");
+    var attachment = form && form.querySelector('[name="attachment"]');
+    var style = document.querySelector("#emailOnlyStyle");
+
+    if (!style) {
+      style = document.createElement("style");
+      style.id = "emailOnlyStyle";
+      style.textContent = ".form-note,.mail-note{margin:0;color:#5a6470;font-size:13px;line-height:1.7}";
+      document.head.appendChild(style);
+    }
+
+    if (form) {
+      form.removeAttribute("action");
+      form.removeAttribute("method");
+      form.removeAttribute("enctype");
+    }
+
+    if (attachment) {
+      var attachmentLabel = attachment.closest("label");
+      if (attachmentLabel) {
+        var formNote = document.createElement("p");
+        formNote.className = "form-note";
+        formNote.textContent = "\u5199\u771f\u30fb\u52d5\u753b\u306f\u3001\u30e1\u30fc\u30eb\u4f5c\u6210\u753b\u9762\u3067\u6dfb\u4ed8\u3057\u3066\u304f\u3060\u3055\u3044\u3002";
+        attachmentLabel.replaceWith(formNote);
+      }
+    }
+
+    if (browserButton) browserButton.remove();
+
+    if (mailto) {
+      mailto.textContent = "\u30e1\u30fc\u30eb\u3067\u76f8\u8ac7\u3059\u308b";
+      mailto.addEventListener("click", saveMemo);
+    }
+
+    if (sendBox && !document.querySelector(".mail-note")) {
+      var note = document.createElement("p");
+      note.className = "mail-note";
+      note.style.margin = "0";
+      note.style.color = "#5a6470";
+      note.style.fontSize = "13px";
+      note.style.lineHeight = "1.7";
+      note.textContent = "\u5199\u771f\u30fb\u52d5\u753b\u306f\u30e1\u30fc\u30eb\u4f5c\u6210\u753b\u9762\u3067\u6dfb\u4ed8\u3057\u3066\u304f\u3060\u3055\u3044\u3002";
+      sendBox.appendChild(note);
+    }
+
+    if (form) {
+      form.addEventListener(
+        "submit",
+        function (event) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          saveMemo();
+          if (mailto) window.location.href = mailto.href;
+        },
+        true
+      );
+    }
+  });
+})();
+</script>
