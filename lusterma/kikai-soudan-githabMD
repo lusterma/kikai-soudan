@@ -1,0 +1,40 @@
+# GitHub Settings for `lusterma/kikai-soudan`
+
+Use these values in the repository About/settings area.
+
+## Description
+
+Open diagnostic intake template for machine-tool troubleshooting and used-machine purchase checks.
+
+## Website
+
+Use the GitHub Pages URL if enabled.
+
+## Topics
+
+```text
+machine-tools
+manufacturing
+maintenance
+troubleshooting
+diagnostic-tool
+static-site
+github-pages
+industrial
+repair
+oss
+```
+
+## Codex for OSS Form Text
+
+### Why does this repository qualify?
+
+Machine-tool troubleshooting is underserved in OSS. This repo provides an open, lightweight diagnostic intake template for small manufacturers, repair technicians, and used-machine buyers to structure symptoms, photos/videos, and repair context before expert review. It is early-stage but actively maintained and aims to make industrial maintenance knowledge more accessible.
+
+### How will you use API credits for your project?
+
+I will use API credits to add Codex-powered maintainer workflows: generating issue templates from user feedback, reviewing changes to the static diagnostic form, improving Japanese/English troubleshooting content, and prototyping AI-assisted summaries that turn symptom notes into structured repair handoff reports.
+
+### Anything else we should know?
+
+This is an early-stage OSS project from a manufacturing and repair context. The goal is to turn practical machine-tool troubleshooting knowledge into reusable public templates and workflows for small shops that do not have easy access to expert diagnosis.
