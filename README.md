@@ -1,23 +1,57 @@
-# 工作機械 故障・中古購入 相談室
+# Kikai Soudan
 
-GitHub Pagesで公開するための静的サイトです。
+Kikai Soudan is an open diagnostic intake template for machine-tool troubleshooting and used-machine purchase checks.
 
-## 公開手順
+The project helps small manufacturers, repair technicians, and buyers structure practical field information before expert review: symptoms, machine context, photos, videos, urgency, and suspected failure areas. The goal is to make machine-tool maintenance knowledge easier to share, improve, and reuse.
 
-1. GitHubで新しいリポジトリを作る
-2. このフォルダ内のファイルをアップロードする
-3. Settings > Pages を開く
-4. Source を `Deploy from a branch` にする
-5. Branch を `main`、Folder を `/root` にする
-6. Save する
+## Why This Exists
 
-数分後に `https://ユーザー名.github.io/リポジトリ名/` で公開されます。
+Many small shops do not have an easy way to explain machine-tool problems clearly before calling a technician. Important details often stay in phone calls, scattered photos, or handwritten notes.
 
-## 内容
+This repository turns that first conversation into a reusable public workflow. It is early-stage, but the direction is simple: make industrial troubleshooting more accessible through open templates and lightweight tools.
 
-- `index.html`: 相談ページ
-- `styles.css`: デザイン
-- `app.js`: 相談メモ自動作成
-- `assets/machine-shop-hero.png`: ヒーロー画像
-- `sales-playbook.md`: 営業文面と30日テスト
-- `leads-template.csv`: 見込み客管理テンプレート
+## Current Contents
+
+- `index.html`: Static diagnostic intake page for machine-tool consultation
+- `README.md`: Project overview and contribution guide
+
+## Use Cases
+
+- Recording symptoms before requesting machine-tool repair
+- Preparing information for used-machine purchase checks
+- Creating structured handoff notes for technicians
+- Translating practical maintenance knowledge into reusable templates
+- Prototyping AI-assisted troubleshooting summaries
+
+## Project Status
+
+This is an early-stage OSS project. The first version is a static GitHub Pages-ready intake page. Future work may include:
+
+- Issue templates for real troubleshooting cases
+- English/Japanese diagnostic wording improvements
+- Exportable repair handoff reports
+- Example cases for common machine-tool symptoms
+- Lightweight automation for summarizing user-submitted notes
+
+## Contributing
+
+Contributions are welcome, especially from people with experience in manufacturing, machine maintenance, field service, used industrial equipment, or technical documentation.
+
+Helpful contributions include:
+
+- Improving the wording of diagnostic questions
+- Adding common machine-tool symptom examples
+- Translating or clarifying Japanese/English content
+- Suggesting better issue templates
+- Improving accessibility and mobile usability
+- Documenting real-world maintenance workflows in a reusable way
+
+If you are unsure where to start, open an issue with the machine type, symptom, and what information would help a technician diagnose it.
+
+## Local Development
+
+This is a static site. Open `index.html` in a browser, or serve the directory with any local static file server.
+
+## License
+
+MIT License. See `LICENSE` for details.
