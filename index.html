@@ -309,6 +309,21 @@
         font-weight: 900;
       }
 
+      .price-strike {
+        color: #c0392b;
+        text-decoration: line-through double #c0392b;
+      }
+
+      .limited-label {
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 11px;
+        font-weight: 800;
+        color: #c0392b;
+        vertical-align: middle;
+        letter-spacing: 0.05em;
+      }
+
       .featured {
         border-color: var(--accent);
         box-shadow: var(--shadow-md);
@@ -564,7 +579,7 @@
           <div class="plans">
             <article>
               <h3>写真・動画診断</h3>
-              <p class="price">11,000円</p>
+              <p class="price price-strike">11,000円<span class="limited-label">期間限定</span></p>
               <p>銘板、外観、異音動画、加工不良の写真から、原因候補と確認手順を返します。</p>
             </article>
             <article class="featured">
@@ -587,7 +602,7 @@
             <p class="eyebrow">機械ドック</p>
             <h2>止まってから修理する前に、今の状態を見える化します。</h2>
             <p class="plain-text">
-              修理の売り込みではなく、現時点で分かること、追加で確認したいこと、優先順位を整理します。社内説明や稟議にも使いやすい写真付きレポート形式です。
+              修理の売り込みではなく、現時点で分かること、追加で確認したいこと、優先順位を整理します。社内説明や稟議にも使いやすい写真付きレポートを作ります。
             </p>
             <ul class="check-list">
               <li>故障原因の候補を整理</li>
@@ -707,7 +722,7 @@
               <p class="send-status" id="browserSendStatus"></p>
             </div>
             <p class="mail-note">写真・短い動画は「メールで相談する」から添付してください。ブラウザ送信は文字の相談メモだけ送ります。</p>
-            <p class="video-note">メールで送れない大きい動画だけ、専用アップロードフォームから送ってください。異音、動作不良、エラー表示、加工状態が分かる動画があると判断しやすくなります。</p>
+            <p class="video-note">メールで送れない大きい動画だけ、専用アップロードフォームから送ってください。異音、動作不良、エラー表示、加工状態など。</p>
           </aside>
         </div>
       </section>
